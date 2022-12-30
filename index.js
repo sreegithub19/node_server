@@ -1,4 +1,5 @@
 var http = require('http');
+const { spawn } = require('child_process');
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
@@ -15,6 +16,7 @@ http.createServer(function (req, res) {
        <li><a href='/maze'>Maze</a></li>
         <li><a href='/tic_tac_toe'>Tic-tac-toe</a></li>
         <li><a href='/clock'>Analogue clock</a></li>
+        <li><a href='/python'>Python</a></li>
         <li><a href='/hangman'>Hangman</a></li>
         <li><a href='/puzzles'>Estonian puzzles</a></li>
         <li><a href='/sudoku'>Sudoku</a></li>
@@ -28,6 +30,24 @@ http.createServer(function (req, res) {
    </ul> </div> 
        </div> </body> </html>
     `);
+  }
+
+  else if(req.url=="/python"){
+    var child = spawn("python", ["-c",`
+print(input("Enter a number:"))
+print(input("Enter a number:"))
+print(input("Enter a number:"))
+print(input("Enter a number:"))
+print(input("Enter a number:"))
+`
+]);
+  function cascade(){
+    child.stdout.pipe(process.stdout);
+    child.stderr.pipe(process.stderr);
+    process.stdin.pipe(child.stdin);
+    //child.on('exit', () => process.exit());
+  }
+  cascade()
   }
 
   else if(req.url=="/chess"){res.write(`
