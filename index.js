@@ -34,11 +34,7 @@ http.createServer(function (req, res) {
 
   else if(req.url=="/python"){
     var child = spawn("python", ["-c",`
-print(input("Enter a number:"))
-print(input("Enter a number:"))
-print(input("Enter a number:"))
-print(input("Enter a number:"))
-print(input("Enter a number:"))
+print("Enter a number:")
 `
 ]);
   function cascade(){
