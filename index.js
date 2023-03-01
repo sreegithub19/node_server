@@ -2300,6 +2300,7 @@ print("Enter a number:")
 <html>
     <head>
         <title>Page Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.9.12/sass.sync.min.js"><\/script>
         <style type="scss">
 @mixin l2d($color,$strength){
