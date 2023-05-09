@@ -1,0 +1,11 @@
+{
+  "name": "node_server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sreegithub19/node_server.git",
+  "author": "<sreedhar.k@rakuten.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^29.1.1"
+  }
+}
