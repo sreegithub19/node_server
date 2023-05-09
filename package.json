@@ -7,5 +7,9 @@
   "license": "MIT",
   "devDependencies": {
     "vercel": "^29.1.1"
+  },
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel deploy --prod"
   }
 }
